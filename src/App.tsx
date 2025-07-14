@@ -1,8 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Home } from "./components/home";
-import { Counter } from "./components/counter";
 import { Navbar } from "./components/Navbar";
+import { Home } from "./components/Home";
+import { Counter } from "./components/Counter";
+import { FormComponent } from "./components/Form";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
     <Routes>
         <Route path="/" element={<Home />}>Home</Route>
         <Route path="/counter" element={<Counter />}>counter</Route>
+        <Route path="/form" element={<FormComponent />}>Form</Route>
       </Routes>
     </div>
   );

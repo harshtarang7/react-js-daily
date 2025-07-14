@@ -22,6 +22,9 @@ export const Navbar = () => {
         <Link to={"/counter"} style={{ textDecoration: "none" }}>
           Counter
         </Link>
+        <Link to={"/form"} style={{ textDecoration: "none" }}>
+          Form
+        </Link>
       </div>
     </div>
   );
