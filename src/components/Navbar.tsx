@@ -1,6 +1,11 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import ToggleOnIcon from '@mui/icons-material/ToggleOn';
+import ToggleOffIcon from '@mui/icons-material/ToggleOff';
 
 export const Navbar = () => {
+  const [toggle,setToggle]= useState(false);
+  
   return (
     <div
       style={{
@@ -25,6 +30,7 @@ export const Navbar = () => {
         <Link to={"/form"} style={{ textDecoration: "none" }}>
           Form
         </Link>
+        <button style={{backgroundColor:'white', border:0,padding:'0px 10px', cursor:'pointer'}} onClick={()=>setToggle(!toggle)}>{toggle?<ToggleOnIcon sx={{color:'green'}}/>:<ToggleOffIcon sx={{color:'red'}}/>}</button>
       </div>
     </div>
   );

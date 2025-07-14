@@ -98,6 +98,7 @@ export const FormComponent = () => {
       <div style={{ width: "100%", display: "flex", gap: 6 }}>
         {savedForm.map((form, index) => (
           <div
+          key={index}
             style={{
               marginTop: "2rem",
               width: "20%",
