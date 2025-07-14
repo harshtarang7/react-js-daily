@@ -3,9 +3,13 @@ import { useState } from "react";
 export const Counter = () => {
   let [counter, setCounter] = useState(0);
 
+  const handleIncrement =()=>{
+    setCounter(prev=>prev+1)
+  }
+
   return (
     <>
-      <h1 style={{ textAlign: "center" }}> this is counter page </h1>
+      <h1 style={{ textAlign: "center" ,marginTop:'2rem'}}> this is counter page </h1>
       <div
         style={{
           display: "flex",
@@ -13,7 +17,7 @@ export const Counter = () => {
           margin: "auto",
           justifyContent: "space-between",
           alignItems: "center",
-          marginTop:10
+          marginTop:'2rem'
         }}
       >
         <button
@@ -25,7 +29,7 @@ export const Counter = () => {
         <span style={{ fontSize: 40 }}>{counter}</span>
         <button
           style={{ fontSize: 40, padding: 6 }}
-          onClick={() => setCounter(counter + 1)}
+          onClick={handleIncrement}
         >
           +
         </button>
