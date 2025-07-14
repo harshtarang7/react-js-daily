@@ -1,8 +1,36 @@
-export const Counter=()=>{
-    return (
-        <>
-        <h1 style={{textAlign:'center'}}> this is counter page </h1>
+import { useState } from "react";
 
-        </>
-    )
-}
+export const Counter = () => {
+  let [counter, setCounter] = useState(0);
+
+  return (
+    <>
+      <h1 style={{ textAlign: "center" }}> this is counter page </h1>
+      <div
+        style={{
+          display: "flex",
+          width: "20%",
+          margin: "auto",
+          justifyContent: "space-between",
+          alignItems: "center",
+          marginTop:10
+        }}
+      >
+        <button
+          style={{ fontSize: 40, padding: 6 }}
+          onClick={() => setCounter(counter - 1)}
+        >
+          -
+        </button>
+        <span style={{ fontSize: 40 }}>{counter}</span>
+        <button
+          style={{ fontSize: 40, padding: 6 }}
+          onClick={() => setCounter(counter + 1)}
+        >
+          +
+        </button>
+      </div>
+      <button onClick={()=>setCounter(0)}>Reset</button>
+    </>
+  );
+};
