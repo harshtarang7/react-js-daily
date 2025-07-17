@@ -4,6 +4,7 @@ import { Navbar } from "./components/Navbar";
 import { Home } from "./components/Home";
 import { Counter } from "./components/Counter";
 import { FormComponent } from "./components/Form";
+import { Todo } from "./components/Todo";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />}>Home</Route>
         <Route path="/counter" element={<Counter />}>counter</Route>
         <Route path="/form" element={<FormComponent />}>Form</Route>
+        <Route path="/todo" element={<Todo />}>Todo</Route>
       </Routes>
     </div>
   );
