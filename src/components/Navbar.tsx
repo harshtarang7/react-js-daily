@@ -33,6 +33,9 @@ export const Navbar = () => {
         <Link to={"/todo"} style={{ textDecoration: "none" }}>
           Todo
         </Link>
+        <Link to={"/tictactoe"} style={{ textDecoration: "none" }}>
+          Tic Tac toe
+        </Link>
         <button style={{backgroundColor:'white', border:0,padding:'0px 10px', cursor:'pointer'}} onClick={()=>setToggle(!toggle)}>{toggle?<ToggleOnIcon sx={{color:'green'}}/>:<ToggleOffIcon sx={{color:'red'}}/>}</button>
       </div>
     </div>
