@@ -1,7 +1,7 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import useTicTacToe from "../customHook/TicTacToe";
 
-export const TicTacToe = () => {
+export const TicTacToe:React.FC = () => {
   const {
     board,
     handleClick,
