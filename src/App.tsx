@@ -6,6 +6,7 @@ import { Counter } from "./components/Counter";
 import { FormComponent } from "./components/Form";
 import { Todo } from "./components/Todo";
 import { TicTacToe } from "./components/TicTacToe";
+import { Products } from "./components/shopping/Products";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/form" element={<FormComponent />}>Form</Route>
         <Route path="/todo" element={<Todo />}>Todo</Route>
         <Route path="/tictactoe" element={<TicTacToe />}>TicTacToe</Route>
+        <Route path="/products" element={<Products />}>Products</Route>
       </Routes>
     </div>
   );
