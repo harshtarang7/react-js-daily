@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { cartContext } from "./CartContext";
 import {
   Box,
@@ -16,8 +16,10 @@ export const Cart = () => {
   }
   const { cart, setCart } = context;
 
+  // will check with the id of the product and update the quantity
   const handleQuantity = (e: React.ChangeEvent<HTMLInputElement>,productId:number) => {
     const value = Number(e.target.value);
+
     if (value < 1) return;
      const updatedCart = cart.map(item=>
         item.id === productId
@@ -26,6 +28,8 @@ export const Cart = () => {
     );
     localStorage.setItem('cart',JSON.stringify(updatedCart));
   };
+
+  // fetch from the local storage 
   useEffect(()=>{
     const cartItems = localStorage.getItem('cart')
     if(cartItems){

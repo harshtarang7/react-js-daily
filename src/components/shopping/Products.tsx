@@ -12,8 +12,9 @@ export const Products: React.FC = () => {
     throw new Error("useContext must be used within a Provider");
   }
   const { cart, setCart } = context;
-  console.log('cart',cart)
 
+  // it will check if the item already exist, if it's still exist then it will udpate the quantity
+  // it will set into localstorage 
   const addtoCart = (product: ProductListInterface) => {
     const existingItem = cart.find(item=>item.id === product.id)
     if(existingItem){
@@ -62,7 +63,7 @@ export const Products: React.FC = () => {
             backgroundColor: "red",
           }}
         >
-          1
+         {cart.length}
         </sup>
       </Button>
       </Link>
