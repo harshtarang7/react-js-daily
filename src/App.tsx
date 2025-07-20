@@ -4,7 +4,7 @@ import { Navbar } from "./components/Navbar";
 import { Home } from "./components/Home";
 import { Counter } from "./components/Counter";
 import { FormComponent } from "./components/Form";
-import { Todo } from "./components/Todo";
+import { Todo } from "./components/todo/Todo";
 import { TicTacToe } from "./components/TicTacToe";
 import { Products } from "./components/shopping/Products";
 import MainContext from "./components/shopping/CartContext";
