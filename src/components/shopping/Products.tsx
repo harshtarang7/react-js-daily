@@ -81,7 +81,14 @@ export const Products: React.FC = () => {
                   gap: 1,
                 }}
               >
+                <Box sx={{
+                  display:'flex',
+                  justifyContent:'space-between',
+                  alignItems:'center'
+                }}>
                 <img src={product.images[0]} width={"30%"} />
+                <Typography sx={{ backgroundColor:' #3781ff8f' , borderRadius:9,padding:1}} fontSize={12}> <strong>Discount</strong> {' ' + product.discountPercentage} %</Typography>
+                </Box>
                 <Typography fontWeight={600}>{product.title}</Typography>
                 <Typography
                   component={"span"}
